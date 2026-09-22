@@ -1,0 +1,46 @@
+# Dependencies
+node_modules
+.venv
+backend/.venv
+venv
+
+# Logs & Caches
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+.cache
+__pycache__/
+backend/__pycache__/
+backend/stt/__pycache__/
+*.pyc
+
+# Build outputs
+dist
+dist-ssr
+build
+
+# Environment files
+.env
+*.env
+!.env.example
+
+# Local SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+backend/*.db
+backend/*.sqlite
+backend/*.sqlite3
+
+# Editor / OS files
+.vscode
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

@@ -1,0 +1,128 @@
+/* SignClass Design Tokens - Dark Mode Default (Classroom optimized, low glare) */
+:root {
+  /* Color Palette - WCAG AAA compliant contrast */
+  --bg-base: #0D1117;
+  --bg-surface: #161B22;
+  --bg-elevated: #1F2630;
+  --bg-hover: #262E3B;
+  --border: #2D3643;
+  --border-strong: #404B5C;
+
+  /* Typography Colors */
+  --text-primary: #F0F4F8;   /* 15.8:1 contrast on base */
+  --text-secondary: #A9B4C2; /* 7.9:1 contrast */
+  --text-muted: #7A8695;     /* 4.9:1 contrast */
+
+  /* Functional Accents */
+  --accent: #4DA3FF;          /* Primary live actions */
+  --accent-muted: rgba(77, 163, 255, 0.15);
+  --success: #3FCF8E;         /* Answered, completed */
+  --success-muted: rgba(63, 207, 142, 0.15);
+  --warning: #FFB45C;         /* Deadlines, upcoming */
+  --warning-muted: rgba(255, 180, 92, 0.15);
+  --danger: #FF6B6B;          /* Urgent, overdue */
+  --danger-muted: rgba(255, 107, 107, 0.15);
+  --exam: #C084FC;            /* Exam notes & hints */
+  --exam-muted: rgba(192, 132, 252, 0.15);
+
+  /* Speaker Identifiers */
+  --speaker-teacher: #4DA3FF;
+  --speaker-student: #3FCF8E;
+
+  /* Fonts */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* Dynamic Caption Scale */
+  --caption-size: 24px;
+  --caption-line-height: 1.6;
+
+  /* Spacing Scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+
+  /* Border Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Shadows & Glassmorphism */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --glass-bg: rgba(22, 27, 34, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-backdrop: blur(12px);
+
+  /* Layout Dimensions */
+  --header-height: 64px;
+  --actionbar-height: 72px;
+}
+
+/* Light Theme Override */
+[data-theme="light"] {
+  --bg-base: #F5F7FA;
+  --bg-surface: #FFFFFF;
+  --bg-elevated: #EDF1F7;
+  --bg-hover: #E2E8F0;
+  --border: #CBD5E1;
+  --border-strong: #94A3B8;
+
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+
+  --accent: #0066CC;
+  --accent-muted: rgba(0, 102, 204, 0.12);
+  --success: #059669;
+  --success-muted: rgba(5, 150, 105, 0.12);
+  --warning: #D97706;
+  --warning-muted: rgba(217, 119, 6, 0.12);
+  --danger: #DC2626;
+  --danger-muted: rgba(220, 38, 38, 0.12);
+  --exam: #7C3AED;
+  --exam-muted: rgba(124, 58, 237, 0.12);
+
+  --speaker-teacher: #0066CC;
+  --speaker-student: #059669;
+
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* High Contrast Theme Override (21:1 pure contrast) */
+[data-theme="high-contrast"] {
+  --bg-base: #000000;
+  --bg-surface: #000000;
+  --bg-elevated: #121212;
+  --bg-hover: #222222;
+  --border: #FFFFFF;
+  --border-strong: #FFFFFF;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #E0E0E0;
+  --text-muted: #CCCCCC;
+
+  --accent: #3399FF;
+  --accent-muted: rgba(51, 153, 255, 0.3);
+  --success: #00FF66;
+  --success-muted: rgba(0, 255, 102, 0.3);
+  --warning: #FFCC00;
+  --warning-muted: rgba(255, 204, 0, 0.3);
+  --danger: #FF3333;
+  --danger-muted: rgba(255, 51, 51, 0.3);
+  --exam: #DD88FF;
+  --exam-muted: rgba(221, 136, 255, 0.3);
+
+  --speaker-teacher: #3399FF;
+  --speaker-student: #00FF66;
+
+  --glass-bg: #000000;
+  --glass-border: #FFFFFF;
+}

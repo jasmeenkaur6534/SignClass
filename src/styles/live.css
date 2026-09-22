@@ -1,0 +1,249 @@
+/* Live Class Screen Layout & Components */
+
+.live-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-base);
+  overflow: hidden;
+}
+
+/* Header Bar */
+.live-header {
+  height: var(--header-height);
+  padding: 0 var(--space-6);
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+/* Main Split View */
+.live-main {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Left Zone: Live Caption Stream (62% width on desktop) */
+.caption-zone {
+  flex: 0 0 62%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border);
+  background-color: var(--bg-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.caption-stream {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  scroll-behavior: smooth;
+}
+
+/* Caption Block */
+.caption-block {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-surface);
+  border-left: 4px solid var(--speaker-teacher);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  max-width: var(--max-w-ch, 68ch);
+}
+
+.caption-block-student {
+  border-left-color: var(--speaker-student);
+  background-color: rgba(63, 207, 142, 0.05);
+}
+
+.caption-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-2);
+}
+
+.caption-speaker-teacher {
+  color: var(--speaker-teacher);
+}
+.caption-speaker-student {
+  color: var(--speaker-student);
+}
+
+.caption-text {
+  font-size: var(--caption-size);
+  line-height: var(--caption-line-height);
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.caption-interim {
+  opacity: 0.65;
+  font-style: italic;
+  animation: slideFadeIn 0.15s ease-out;
+}
+
+/* Topic Divider inside stream */
+.topic-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin: var(--space-4) 0;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.topic-divider-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(77, 163, 255, 0.5), transparent);
+}
+
+/* Floating "Jump to Live" Pill */
+.jump-live-pill {
+  position: absolute;
+  bottom: var(--space-4);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent);
+  color: #FFFFFF;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  animation: slideFadeIn 0.2s ease-out;
+}
+.jump-live-pill:hover {
+  filter: brightness(1.1);
+}
+
+/* Right Zone: AI Classroom Insights Panel (38% width on desktop) */
+.insights-zone {
+  flex: 0 0 38%;
+  background-color: var(--bg-surface);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: var(--space-6);
+  gap: var(--space-6);
+}
+
+.insights-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.insights-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--space-2);
+}
+
+.insight-card {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  animation: slideFadeIn 0.25s ease-out;
+  position: relative;
+}
+
+.insight-card-low-confidence {
+  border-style: dashed;
+  border-color: var(--warning);
+}
+
+.insight-timestamp-link {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  background-color: var(--accent-muted);
+  padding: 2px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.insight-timestamp-link:hover {
+  text-decoration: underline;
+}
+
+/* Action Bar (Bottom 72px) */
+.live-action-bar {
+  height: var(--actionbar-height);
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border);
+  padding: 0 var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+/* Presenter Demo Bar */
+.presenter-bar {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(13, 17, 23, 0.95);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-full);
+  padding: 6px 16px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  box-shadow: var(--shadow-lg);
+  z-index: 99;
+  backdrop-filter: blur(8px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .live-main { flex-direction: column; }
+  .caption-zone { flex: 1 1 100%; border-right: none; }
+  .insights-zone {
+    position: fixed;
+    bottom: var(--actionbar-height);
+    left: 0; right: 0;
+    height: 50vh;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 30;
+    border-top: 2px solid var(--accent);
+  }
+}

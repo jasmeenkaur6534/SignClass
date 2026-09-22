@@ -1,0 +1,169 @@
+/* Classroom ISL & Learning Styles */
+
+.isl-container {
+  min-height: 100vh;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+.isl-main {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.isl-search-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+.category-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.chip-filter {
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  background-color: var(--bg-elevated);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chip-filter:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.chip-filter-active {
+  background-color: var(--accent-muted);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.isl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+/* Sign Entry Card */
+.sign-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.sign-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+}
+
+.sign-media-box {
+  width: 100%;
+  height: 200px;
+  background-color: #05080E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sign-card-body {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.sign-term-english {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.sign-term-hindi {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.sign-description {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  background-color: var(--bg-elevated);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--accent);
+}
+
+/* Flashcard Quiz */
+.quiz-box {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  max-width: 640px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  box-shadow: var(--shadow-lg);
+}
+
+.quiz-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+/* Camera Practice Shell */
+.camera-preview-box {
+  width: 100%;
+  height: 320px;
+  background-color: #000;
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camera-overlay-guide {
+  position: absolute;
+  inset: 20px;
+  border: 2px dashed rgba(77, 163, 255, 0.5);
+  border-radius: var(--radius-lg);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(77, 163, 255, 0.7);
+  font-size: 13px;
+  font-weight: 600;
+}

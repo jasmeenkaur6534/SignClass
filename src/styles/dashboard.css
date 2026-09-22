@@ -1,0 +1,102 @@
+/* Student Dashboard Styles */
+
+.dashboard-container {
+  min-height: 100vh;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-main {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--space-6);
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: var(--space-6);
+}
+
+.dashboard-left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.dashboard-right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Class Card */
+.class-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.class-card-live {
+  border-color: var(--accent);
+  box-shadow: 0 0 15px rgba(77, 163, 255, 0.15);
+}
+
+.class-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.class-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.class-details {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* Deadline Card */
+.deadline-card {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.urgency-due-today {
+  border-left: 4px solid var(--danger);
+}
+.urgency-soon {
+  border-left: 4px solid var(--warning);
+}
+.urgency-later {
+  border-left: 4px solid var(--accent);
+}
+
+/* Announcements List */
+.announcement-item {
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--bg-elevated);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 1024px) {
+  .dashboard-main {
+    grid-template-columns: 100%;
+  }
+}
